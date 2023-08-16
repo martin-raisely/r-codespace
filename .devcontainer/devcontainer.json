@@ -2,9 +2,10 @@
   "image": "mcr.microsoft.com/devcontainers/universal:2",
   "features": {
     "ghcr.io/rocker-org/devcontainer-features/r-rig:1": {
+      "version": "4.3.1",
       "vscodeRSupport": "full",
-      "renv": true,
-      "rmarkdown": true, 
+      "installREnv": true,
+      "installRMarkdown": false, 
       "installRadian": true, 
       "installVscDebugger": true,
     }
