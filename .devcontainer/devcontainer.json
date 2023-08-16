@@ -10,5 +10,25 @@
       "installVscDebugger": true,
     }
   },
-  "postCreateCommand": "R -s -e 'renv::restore()'"
+  "onCreateCommand": "R -s -e 'renv::restore()'",
+  "customizations": {
+    "vscode": {
+      // Set *default* container specific settings.json values on container create.
+      "settings": {
+        "editor.tabSize": 2,
+        "r.rterm.linux": "/home/codespace/.python/current/bin/radian",
+        "r.bracketedPaste": true,
+        "r.plot.useHttpgd": true,
+        "[r]": {
+          "editor.wordSeparators": "`~!@#%$^&*()-=+[{]}\\|;:'\",<>/?"
+        }
+      },
+      // Add the IDs of extensions you want installed when the container is created.
+      "extensions": [
+        "reditorsupport.r",
+        "rdebugger.r-debugger",
+        "quarto.quarto"
+      ]
+    }
+  }
 }
